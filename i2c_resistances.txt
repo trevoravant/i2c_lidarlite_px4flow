@@ -1,0 +1,6 @@
+external pull-up resistor ranges for I2C devices
+
+DEVICE				MIN WORKING  	MAX WORKING
+PX4Flow 			~4.5k		20k+
+LIDAR-Lite 			~.9k		20k+
+PX4Flow & LIDAR-Lite together	~12k		20k+

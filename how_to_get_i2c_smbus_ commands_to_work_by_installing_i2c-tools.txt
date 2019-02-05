@@ -1,0 +1,8 @@
+HOW TO GET THE i2c_smbus_* COMMANDS WORKING
+
+1. install i2c-tools on the linux operation system (sudo apt-get install i2c-tools). note that the i2c-tools package can also be installed manually by downloading the source (sudo apt-get source i2c-tools) and following the install directions in the README. however it seems that installing i2c-tools this way is different then using apt-get. one difference is that i believe installing i2c-tools manually will create a file /usr/local/include/linux/i2c-dev.h which may conflict with /usr/include/linux/i2c.h when trying to compile certain C/C++ codes.
+
+2. copy the i2c-dev.h file from the i2c-tools package to the current directory (there is an "i2c-tools" github page, but do not use it as it is not from the developers and contains an erroneous i2c-dev.h file. instead download the source directly (apt-get source i2c-tools)
+
+3. #include "i2c-dev.h" in the C file
+

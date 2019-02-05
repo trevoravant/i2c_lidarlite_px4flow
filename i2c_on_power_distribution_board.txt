@@ -1,0 +1,2 @@
+using the I2C on the power distribution board (through the level shifter with fixed 10k resistors),
+the PXFlow does not work and I haven't tried this yet with the Lidar-Lite, but it does not work as I recall

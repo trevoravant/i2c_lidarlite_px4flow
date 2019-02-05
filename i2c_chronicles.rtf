@@ -1,0 +1,67 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\fswiss\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\froman\fprq0\fcharset128 Calibri;}{\f6\fnil\fprq2\fcharset0 Droid Sans Fallback;}{\f7\fnil\fprq2\fcharset0 FreeSans;}{\f8\fswiss\fprq0\fcharset128 FreeSans;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue128;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033 Normal;}
+{\*\cs15\snext15\cf2\ul\ulc0\langfe255\alang255\lang255 Internet Link;}
+{\s16\sbasedon0\snext17\sb240\sa120\keepn\dbch\af6\dbch\af7\afs28\loch\f4\fs28 Heading;}
+{\s17\sbasedon0\snext17\sl288\slmult1\sb0\sa140 Text Body;}
+{\s18\sbasedon17\snext18\sl288\slmult1\sb0\sa140\dbch\af8 List;}
+{\s19\sbasedon0\snext19\sb120\sa120\noline\i\dbch\af8\afs24\ai\fs24 Caption;}
+{\s20\sbasedon0\snext20\noline\dbch\af8 Index;}
+}{\info{\creatim\yr0\mo0\dy0\hr0\min0}{\revtim\yr0\mo0\dy0\hr0\min0}{\printim\yr0\mo0\dy0\hr0\min0}{\comment LibreOffice}{\vern67241986}}\deftab720
+\viewscale80
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn12240\pghsxn15840\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\pgdscnxt0 Default Style;}}
+\formshade{\*\pgdscno0}\paperh15840\paperw12240\margl1800\margr1800\margt1440\margb1440\sectd\sbknone\sectunlocked1\pgndec\pgwsxn12240\pghsxn15840\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pgndec\pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+This post describes my experience connecting two devices, a LIDAR-Lite (version 1) and a PX4Flow opical flow sensor, together over I2C to a Gumstix embedded computer.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+HARDWARE}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+I used a Gumstix }{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+Overo }{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+FireSTORM COM which runs}{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+ a }{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+Linux}{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+ operating system. I used a Gumstix SUMMIT expansion board to access the I2C output of the Overo. The 40pin header on this expansion board allows access to the Overo's i2c-3 bus. The i2c-3 bus on the Overo uses 1.8V logic (meaning a binary 1 is represented as 1.8V and a binary 0 is represented as 0V). The LIDAR-Lite and PX4Flow both require 5v logic for their I2C ports. Accordingly, it is necessary to use a logic level shifter to convert the 1.8V logic on the Overo to the 5V logic on the sensors.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+CODE}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+In Overo's Linux environment, I wrote the code to do the I2C communication in C. In Linux, communication over I2C can be accomplished by using the "ioctl" function. ioctl functionality can be included in a C program in user space by using "#include <sys/ioctl.h>". In all I2C communications, the master (in this case the Overo) must specify whether the command sent to the slave (in this case the LIDAR-Lite or PX4Flow) is a "read" or "write" operation. The format of these read and write operations are dictated by the slave device, and can be determined from the slave device's documentation.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+In order to obtain sensor data from the PX4Flow, the master must send the device a write command specifying what information is to be obtained, and then send a read command in which the master reads the appropriate data. Between the write and read commands, there can be no stop bit between (for definition of a "stop bit" in I2C protocol, consult a reference on I2C communication). This write/read sequence can be accomplished using the I2C_RDWR protocall of the ioctl function (i.e. a command of the form "ioctl(file, I2C_RDWR, struct i2c_rdwr_ioctl_data *msgset)"). This function is designed to send combined commands consisting of read and write operations to a device, with no stop bits in between. Note that the I2C_SMBUS protocall of ioctl (i.e. commands of the form "ioctl(file, I2C_SMBUS, struct i2c_smbus_ioctl_data *args)") cannot be used as I do not believe this function can implement combined read/write sequences with no stop bits in between. Also note that the PX4Flow does not require read and write operations to be sent to specific registers on the device.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+To obtain sensor data from the LIDAR-Lite over I2C, the master must send a write command, wait some amount of time for the sensor to do some processing, and then send a read command to finally obtain the data. This requires separate write and read commands to be sent to the LIDAR-Lite (unlike the combined write/read operation for the PX4Flow). The I2C_SMBUS protocall of the ioctl function can be used to obtain this data. As noted in the ioctl function's documentation, the I2C_SMBUS protocalls are "not meant to be called directly".}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+Using ioctl to perform I2C operations in user space is not obvious. I have found that a good way to understand how to do this is by examining the i2c-tools package. The i2c-tools source code can be downloaded using "sudo apt-get source i2c-tools". Note that there is an i2c-tools page on GitHub, but do not use it as some of these files are erroneous. A particularly useful file in the source code is /include/linux/i2c-dev.h, which shows how to use I2C commands with SMBus functionality. i2c-tools can be downloaded and installed, but I chose to use just copy the declarations and definitions I needed from /include/linux/i2c-dev.h. Doing it this way makes it a little more transparent as to how ioctl is being used. Sample C codes for LIDAR-Lite and PX4Flow communication are below.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+LOGIC LEVEL SHIFTING CIRCUIT}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+As noted previously, the Overo has 1.8V logic while the LIDAR-Lite and PX4Flow use 5V logic. I2C communication between a master and slave with the same logic voltages simply requires the use of two pull-up resistors; one from the supply voltage to the clock line, and another from the supply voltage to the data line. When the master and slave operate at different logic levels, as in this case, a more complicated circuit is required to ensure the logic signals match. There are a variety of circuits which can accomplish logic level shifting, and I used the circuit described in application note AN10441 provided by NXP (the company which invented I2C). This circuit uses MOS-FETs in combination with four pull-up resistors. Choosing values for pull-up resistors depends on properties of master and slave devices such as the bus capacitance and the values of internal pull-up resistors on either the master or slave (if such internal pull-ups exist or are enabled). The basic criteria in chosing an appropriate value for a pull-up resistor is as follows. A pull-up resistor cannot have too small of a resistance or the clock and data lines cannot obtain a low enough voltage to register as a logic 0. Additionally, a pull-up resistor cannot have too large of a resistance or the clock and data lines will not be able to return to a high state (logic 1) from a low state (logic 0) fast enough for the I2C protocall to work.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+It is possible to calculate appropriate values for pull-up resistors based on charactersistics of the circuit (e.g. internal pull-up resistance, bus capacitance, etc.). However, I used a trial and error method by building the logic level shifting circuit with pull-up resistors of variable resistance. Thus I built the circuit in application note AN10441, and used potentiometers wired as variable resistors for the pull-up resistors (those labeled as Rp in NXP's diagram). Note that adafruit makes a breakout board which replicates the AN10441 circuit with 10k resistors (}{{\field{\*\fldinst HYPERLINK "https://www.adafruit.com/product/757" }{\fldrslt {\cf2\ul\ulc0\langfe255\alang255\lang255\rtlch \ltrch\loch\fs22\lang9\loch\f5
+https://www.adafruit.com/product/757}{}}}\rtlch \ltrch\loch\fs22\lang9\loch\f5
+) . However, fixed 10k resistors will not work in this project if the LIDAR-Lite and PX4Flow are to be used together (although they do work for each device separately).}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200\rtlch \ltrch\loch\fs22\lang9\loch\f5
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{\rtlch \ltrch\loch\fs22\lang9\loch\f5
+LINKS}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\sl276\slmult1\sb0\sa200{{\field{\*\fldinst HYPERLINK "https://wiki.gumstix.com/index.php/Category:How_to_-_i2c" }{\fldrslt {\cf2\ul\ulc0\langfe255\alang255\lang255\rtlch \ltrch\loch\fs22\lang9\loch\f5
+https://wiki.gumstix.com/index.php/Category:How_to_-_i2c}}}}
+\par }

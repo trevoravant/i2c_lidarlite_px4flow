@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2688.1165mm"
+   height="506.86713mm"
+   viewBox="0 0 2688.1165 506.86713"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="PX.svg">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4542">
+      <rect
+         style="opacity:0.51999996;fill:#830000;fill-opacity:0.99497483;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect4544"
+         width="694.56866"
+         height="506.384"
+         x="-335.35837"
+         y="-93.923607" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4548">
+      <rect
+         style="opacity:0.51999996;fill:#830000;fill-opacity:0.99497483;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect4550"
+         width="677.22296"
+         height="506.03775"
+         x="665.08905"
+         y="-97.796135" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4554">
+      <rect
+         style="opacity:0.51999996;fill:#830000;fill-opacity:0.99497483;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect4556"
+         width="670.62537"
+         height="506.04919"
+         x="1854.6564"
+         y="-80.178322" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4560">
+      <rect
+         style="opacity:0.51999996;fill:#830000;fill-opacity:0.99497483;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect4562"
+         width="680.09753"
+         height="506.52087"
+         x="3069.76"
+         y="-74.088768" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.061871843"
+     inkscape:cx="2952.9082"
+     inkscape:cy="2989.2194"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="877"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(335.35837,94.40673)">
+    <image
+       sodipodi:absref="C:\Users\Trevor\Dropbox\research\hummingbird\i2c\photos\PX_withPXonly_3k_fail.jpg"
+       xlink:href="PX_withPXonly_3k_fail.jpg"
+       clip-path="url(#clipPath4542)"
+       width="903.11108"
+       height="508"
+       preserveAspectRatio="none"
+       id="image4493"
+       x="-386.9216"
+       y="-95.339287" />
+    <image
+       sodipodi:absref="C:\Users\Trevor\Dropbox\research\hummingbird\i2c\photos\PX_withPXonly_9k_work.jpg"
+       xlink:href="PX_withPXonly_9k_work.jpg"
+       transform="translate(-320.16634,3.8725281)"
+       clip-path="url(#clipPath4548)"
+       width="903.11108"
+       height="508"
+       preserveAspectRatio="none"
+       id="image4515"
+       x="646.08728"
+       y="-99.119049" />
+    <image
+       sodipodi:absref="C:\Users\Trevor\Dropbox\research\hummingbird\i2c\photos\PX_withPXonly_opencircuit_work.jpg"
+       xlink:href="PX_withPXonly_opencircuit_work.jpg"
+       transform="translate(-1397.0994,-20.317962)"
+       clip-path="url(#clipPath4560)"
+       width="903.11108"
+       height="508"
+       preserveAspectRatio="none"
+       id="image4526"
+       x="3021.9395"
+       y="-74.934898" />
+    <image
+       sodipodi:absref="C:\Users\Trevor\Dropbox\research\hummingbird\i2c\photos\PX_withPXonly_50k_work.jpg"
+       xlink:href="PX_withPXonly_50k_work.jpg"
+       transform="translate(-842.56493,-13.756744)"
+       clip-path="url(#clipPath4554)"
+       width="903.11108"
+       height="508"
+       preserveAspectRatio="none"
+       id="image4537"
+       x="1772.127"
+       y="-81.013062" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4522-4"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-233.92923,-106.62438)"
+       inkscape:export-xdpi="144"
+       inkscape:export-ydpi="144"><flowRegion
+         id="flowRegion4524-3"><rect
+           id="rect4526-5"
+           width="2379.9194"
+           height="347.49249"
+           x="-496.99506"
+           y="177.01691" /></flowRegion><flowPara
+         id="flowPara4528-9"
+         style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#a90000;fill-opacity:1"><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#c00000;fill-opacity:1"
+           id="flowSpan4532-8">✗ </flowSpan><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#0000d0;fill-opacity:1"
+           id="flowSpan4550-9">3kΩ</flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4522-7"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,1791.4979,-106.62438)"
+       inkscape:export-xdpi="144"
+       inkscape:export-ydpi="144"><flowRegion
+         id="flowRegion4524-5"><rect
+           id="rect4526-7"
+           width="2379.9194"
+           height="347.49249"
+           x="-496.99506"
+           y="177.01691" /></flowRegion><flowPara
+         id="flowPara4528-6"
+         style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#a90000;fill-opacity:1"><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#00a500;fill-opacity:1"
+           id="flowSpan4532-7">✓ </flowSpan><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#0000d0;fill-opacity:1"
+           id="flowSpan4550-5">∞kΩ</flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4522-7-4"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,457.66342,-106.62438)"
+       inkscape:export-xdpi="144"
+       inkscape:export-ydpi="144"><flowRegion
+         id="flowRegion4524-5-5"><rect
+           id="rect4526-7-1"
+           width="2379.9194"
+           height="347.49249"
+           x="-496.99506"
+           y="177.01691" /></flowRegion><flowPara
+         id="flowPara4528-6-0"
+         style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#a90000;fill-opacity:1"><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#00a500;fill-opacity:1"
+           id="flowSpan4532-7-7">✓ </flowSpan><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#0000d0;fill-opacity:1"
+           id="flowSpan4550-5-4">9kΩ</flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4522-7-6"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,1128.0311,-106.62438)"
+       inkscape:export-xdpi="144"
+       inkscape:export-ydpi="144"><flowRegion
+         id="flowRegion4524-5-6"><rect
+           id="rect4526-7-14"
+           width="2379.9194"
+           height="347.49249"
+           x="-496.99506"
+           y="177.01691" /></flowRegion><flowPara
+         id="flowPara4528-6-7"
+         style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#a90000;fill-opacity:1"><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#00a500;fill-opacity:1"
+           id="flowSpan4532-7-6">✓ </flowSpan><flowSpan
+           style="font-size:280.00003052px;text-align:center;text-anchor:middle;fill:#0000d0;fill-opacity:1"
+           id="flowSpan4550-5-2">50kΩ</flowSpan></flowPara></flowRoot>  </g>
+</svg>

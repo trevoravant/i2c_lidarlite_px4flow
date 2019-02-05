@@ -1,0 +1,14 @@
+\relax 
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Hardware used in the project. Left to right: Gumstix with expansion board, LIDAR-Lite (version 1), PX4Flow (version 1.3).}}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Logic level shifting circuit in NXP's application note AN10441, with variable resistors (blue components) used as the pull-up resistors $R_p$. The MOS-FETs are the small, black, rectangular components. CLK denotes the I2C clock line, DAT denotes the I2C data line, and ``sensors'' denotes the LIDAR-Lite and PX4Flow.}}{3}}
+\newlabel{fig:logic_level_shifing_circuit}{{2}{3}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces  Minimum and maximum pull-up resistor values $R_p$ for working operation of I2C devices using the level shifting circuit in NXP's AN10441 application note. A value of $\infty $ denotes that the pull-up resistors have been removed entirely from the circuit (i.e. an open circuit).}}{3}}
+\newlabel{table:pullup}{{1}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces I2C waveform for various pull-up resistors when the LIDAR-Lite is connected by itself. Note that the bits of data transfer can be deduced by comparing the clock cycles to the data line. This sequence is 1100010...}}{4}}
+\newlabel{fig:LL}{{3}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces I2C waveform when the PX4Flow is connected by itself.}}{4}}
+\newlabel{fig:PX}{{4}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces When the PX4Flow is connected by itself, $20 k \Omega $ pull-up resistors prevent the clock and data lines from nearing high voltage. However, if the clock speed is reduced, the lines have more time to rise, and the circuit works.}}{5}}
+\newlabel{fig:clockSpeedShift}{{5}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The same waveform as Fig. 5\hbox {}, but with the clock and data lines shifted to show that the waveforms rise from low voltage along the same curve.}}{5}}
+\newlabel{fig:clockSpeedCompare}{{6}{5}}
