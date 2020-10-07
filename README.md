@@ -2,4 +2,4 @@
 
 # [PDF](writeup/i2c_writeup.pdf)
 
-This project describes my experience connecting a LIDAR-Lite and PX4Flow optic flow sensor to a Gumstix computer over I2C. A writeup is provided in link above.
+This project describes my experience connecting a LIDAR-Lite and PX4Flow optic flow sensor to a Gumstix computer over I2C. A writeup is provided in the pdf link above.
